@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "noImplicitAny": false,
+        "moduleResolution": "node",
+        "outDir": "../bin",
+        "rootDir": ".",
+        "sourceMap": true,
+        "experimentalDecorators": true,
+		"emitDecoratorMetadata": true
+    },
+     "exclude": [
+        "node_modules",
+        "wwwroot",
+        "app/@angular",
+        "rxjs",
+        "bin"
+    ]
+}

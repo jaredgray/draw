@@ -1,0 +1,4 @@
+interface IEventHost<T>
+{
+    
+}

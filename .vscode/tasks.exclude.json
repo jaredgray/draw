@@ -1,0 +1,7 @@
+{
+    "version": "0.1.0",
+    "command": "C:\\SourceControl\\PDX Web\\Tools\\taskrunner\\taskrunner\\bin\\Debug\\taskrunner.exe", 
+    "isShellCommand": true,
+    "showOutput": "silent",
+    "args": [".vscode\\taskrunner.json"]
+}

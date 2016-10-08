@@ -1,0 +1,15 @@
+{
+    "$schema": "http://cdn.min.local/schemas/taskrunner.schema.json",
+    "tasks": [
+        {
+            "name": "Build Type Script",
+            "type": "shell",
+            "command": "node",
+            "arguments": [
+                "\"C:\\Users\\jared\\AppData\\Roaming\\npm\\node_modules\\typescript\\bin\\tsc\"",
+                "-p",
+                "\".\\tsconfig.json\""
+            ]
+        }
+    ]
+}

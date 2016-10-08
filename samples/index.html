@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script src="../bin/Enumerable.js"></script>
+    <script src="../bin/Extensions.js"></script>
+    <script src="../bin/drawing/Point.js"></script>
+    <script src="../bin/InputListener.js"></script>
+    <script src="../bin/Historical.js"></script>
+    <script src="../bin/user/Action.js"></script>
+    <script src="../bin/user/DefaultActionFactory.js"></script>
+    <script src="../bin/drawing/InputProviderContext.js"></script>
+    <script src="../bin/drawing/InputProvider.js"></script>
+    <script src="../bin/drawing/DrawingRecorder.js"></script>
+    <script src="../bin/drawing/canvas/CanvasDrawingRenderer.js"></script>
+    <script src="../bin/drawing/canvas/Pencil.js"></script>
+    <script src="../bin/elements/Drawing.js"></script>
+    <script src="../bin/samples/index.js"></script>
+</head>
+
+<body>
+    <div style="float: left; padding-right: 40px;">
+
+    <pdx-drawing id="maindrawing" color="rgb(255, 0, 0)" style="width:400px; height:400px; border:solid 1px red; display:block">
+    </pdx-drawing>
+    <div>
+        <button id="record">record</button><button id="play">play</button>
+    </div>
+    <pdx-drawing id="maindrawingcopy" color="rgb(0, 255, 0)" meow="400" style="width:400px; height:400px; border:solid 1px red; display:block">
+    </pdx-drawing>
+    
+    </div>
+    <div style="float: left">
+
+    <pdx-drawing id="playbackdrawing" allowInput="false" color="rgb(0, 0, 255)" style="width:400px; height:400px; border:solid 1px red; display:block">
+    </pdx-drawing>
+    </div>
+</body>
+
+</html>
