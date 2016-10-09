@@ -6,7 +6,9 @@ import { ElementRef, Component, OnInit } from '@angular/core';
     templateUrl: 'dock.html'
 })
 export class FeatureComponent implements OnInit {
-    constructor(private _elementRef: ElementRef) { }
+    constructor(private _elementRef: ElementRef) {
+        console.log(_elementRef);
+    }
 
     ngOnInit() { }
 }
