@@ -4,7 +4,7 @@
         "target": "es6",
         "noImplicitAny": false,
         "moduleResolution": "node",
-        "outDir": "../bin",
+        "outDir": "bin",
         "rootDir": ".",
         "sourceMap": true,
         "experimentalDecorators": true,
