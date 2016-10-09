@@ -1,0 +1,8 @@
+@import "../theme/material-variables.scss";
+draw-stage { 
+    background: $stage-background;
+    height: 91.2%;
+    width: 100%;
+    display: flex; 
+    color: $primary-foreground;
+}
