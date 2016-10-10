@@ -1,4 +1,4 @@
-class InputController
+export class InputController
 {
     
 }

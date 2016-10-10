@@ -1,5 +1,5 @@
 ///<reference path="./Enumerable.ts" />
-class InputListener implements IInputState
+export class InputListener implements IInputState
 {
     constructor(scope: HTMLElement)
     {
@@ -134,20 +134,4 @@ class InputListener implements IInputState
         if (this.InputMoveListeners.indexOf(listener) >= 0)
             this.InputMoveListeners.slice(this.InputMoveListeners.indexOf(listener), 1);
     }
-}
-
-interface IInputEventCallback
-{
-    (event: IInputStateEvent): void;
-}
-interface IInputStateEvent
-{
-    event: UIEvent;
-    state: IInputState;
-}
-interface IInputState
-{
-    IsInputDown: boolean;
-    X: number;
-    Y: number;
 }

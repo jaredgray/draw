@@ -1,4 +1,8 @@
-class Recorder
+// import { Drawing } from "../../elements/Drawing";
+// import { DrawingRecorder } from "../../drawing/DrawingRecorder";
+// import { CanvasDrawingRenderer } from "../../drawing/canvas/CanvasDrawingRenderer";
+// import { Pencil } from "../../drawing/canvas/Pencil";
+export class Recorder
 {
     constructor()
     {

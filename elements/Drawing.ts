@@ -1,12 +1,11 @@
-///<reference path="../user/Action.ts" />
-///<reference path="../drawing/Point.ts" />
-///<reference path="../Enumerable.ts" />
-///<reference path="../drawing/InputProviderContext.ts" />
-///<reference path="../drawing/InputProvider.ts" />
-///<reference path="../InputListener.ts" />
-///<reference path="../Historical.ts" />
-///<reference path="../Extensions.ts" />
-class Drawing extends HTMLElement
+
+import { InputListener } from "../InputListener"
+import { DrawingRecorder } from "../drawing/DrawingRecorder";
+import { CanvasDrawingRenderer } from "../drawing/canvas/CanvasDrawingRenderer";
+import { Pencil } from "../drawing/canvas/Pencil";
+import { InputProviderContext } from "../drawing/InputProviderContext";
+import { InputProvider } from "../drawing/InputProvider";
+export class Drawing extends HTMLElement
 {
     canvas: HTMLCanvasElement;
     public AllowInput:boolean;

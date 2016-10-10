@@ -4,8 +4,6 @@ var ts = require('gulp-typescript');
 var tslint = require('gulp-tslint');
 var tsProject = ts.createProject('./tsconfig.json');
 
-
-var appdirectory = "app";
 var bindirectory = "bin";
 var slash = '\\'; // assume this will need swapped if not on windows 
 var rootpath = slash + 'draw';
@@ -28,8 +26,16 @@ gulp.task('compile-ts', function() {
                .pipe(gulp.dest(bindirectory));
 });
 
+/**
+function(f) {
+            var startrootindex = f.base.lastIndexOf(rootpath);
+            var target = f.base.substr(0, startrootindex) + rootreplacepath + f.base.substr(startrootindex + rootpath.length);
+            return target;
+        }
+ */
+
 gulp.task('component.views', function(){
-    return gulp.src(appdirectory + '/**/*.html')
+    return gulp.src('**/*.html')
         .pipe(gulp.dest(function(f) {
             var startrootindex = f.base.lastIndexOf(rootpath);
             var target = f.base.substr(0, startrootindex) + rootreplacepath + f.base.substr(startrootindex + rootpath.length);

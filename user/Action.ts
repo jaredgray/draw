@@ -1,5 +1,6 @@
 ///<reference path="../Historical.ts" />
-class Action<T> extends Historical<T>
+import { Historical } from "../Historical";
+export class Action<T> extends Historical<T>
 {
     type: string;
 }

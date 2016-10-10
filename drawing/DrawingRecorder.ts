@@ -2,8 +2,12 @@
 ///<reference path="./Point.ts" />
 ///<reference path="../Historical.ts" />
 ///<reference path="../user/Action.ts" />
+import { Action } from "../user/Action";
+import { Historical } from "../Historical";
+import { InputProvider } from "./InputProvider";
+import { Point } from "./Point";
 
-class DrawingRecorder
+export class DrawingRecorder
 {
     public constructor(provider: InputProvider)
     {

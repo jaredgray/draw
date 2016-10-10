@@ -1,4 +1,5 @@
-class DrawingLayer
+import { PointList } from "./PointList";
+export class DrawingLayer
 {
     constructor()
     {

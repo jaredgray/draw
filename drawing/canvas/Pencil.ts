@@ -1,5 +1,5 @@
-
-class Pencil implements ICanvasBrush
+import { Point } from "../Point";
+export class Pencil implements ICanvasBrush
 {
     constructor()
     {

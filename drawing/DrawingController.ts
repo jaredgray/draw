@@ -1,4 +1,11 @@
-class DrawingController implements IInputController
+///<reference path="IInputController.ts" />
+import { DrawingLayerManager } from "./DrawingLayerManager";
+import { DrawingContext } from "./DrawingContext";
+import { DrawingLayer } from "./DrawingLayer";
+import { Action } from "../user/Action";
+import { Point } from "./Point";
+
+export class DrawingController implements IInputController
 {
     constructor()
     {

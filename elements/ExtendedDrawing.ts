@@ -1,4 +1,13 @@
-class ExtendedDrawing extends Drawing
+import { Drawing } from "./Drawing";
+import { InputListener } from "../InputListener"
+import { DrawingRecorder } from "../drawing/DrawingRecorder";
+import { CanvasDrawingRenderer } from "../drawing/canvas/CanvasDrawingRenderer";
+import { Pencil } from "../drawing/canvas/Pencil";
+import { InputProviderContext } from "../drawing/InputProviderContext";
+import { InputProvider } from "../drawing/InputProvider";
+import { DrawingActionFactory } from "../drawing/DrawingActionFactory";
+import { DrawingController } from "../drawing/DrawingController";
+export class ExtendedDrawing extends Drawing
 {
     createdCallback(): void
     {        

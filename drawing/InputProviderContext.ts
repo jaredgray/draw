@@ -1,5 +1,6 @@
 ///<reference path="../InputListener.ts" />
-class InputProviderContext
+import { InputListener } from "../InputListener";
+export class InputProviderContext
 {
     constructor()
     {

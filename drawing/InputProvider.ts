@@ -6,12 +6,17 @@
 ///<reference path="./IInputActionCallback.ts" />
 ///<reference path="./Point.ts" />
 ///<reference path="./PointList.ts" />
+///<reference path="../IInputStateEvent.ts" />
 /**
  * InputProvider is an abstraction of user inputs. It provides collections of primitive Actions to 
  * objects that attach themselvs to this mechinism via the AddInputActionListener method. The listener
  * is then provided with sets of interpolated points from a point based input listener.
  */
-class InputProvider implements IDestroyable
+import { DefaultActionFactory } from "../user/DefaultActionFactory";
+import { InputProviderContext } from "./InputProviderContext";
+import { Action } from "../user/Action";
+import { Point } from "./Point";
+export class InputProvider implements IDestroyable
 {
 
     // constructor/initializing/deinitializing

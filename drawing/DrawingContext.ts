@@ -1,4 +1,4 @@
-class DrawingContext
+export class DrawingContext
 {
     constructor()
     {

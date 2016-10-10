@@ -1,4 +1,5 @@
-class DrawingLayerManager implements IEventHost<ILayerCollectionChangedCallback>, IEventHost<IActiveLayerChangedCallback>
+import { DrawingLayer } from "./DrawingLayer";
+export class DrawingLayerManager implements IEventHost<ILayerCollectionChangedCallback>, IEventHost<IActiveLayerChangedCallback>
 {
     constructor()
     {

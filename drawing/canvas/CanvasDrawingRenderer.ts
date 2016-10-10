@@ -1,5 +1,6 @@
-
-class CanvasDrawingRenderer implements IDrawingRenderer
+import { Action } from "../../user/Action";
+import { Point } from "../Point";
+export class CanvasDrawingRenderer implements IDrawingRenderer
 {
     constructor(canvas: HTMLCanvasElement)
     {
