@@ -1,7 +1,7 @@
 
 import { Action } from "../user/Action";
 import { Point } from "./Point";
-interface IInputController
+export interface IInputController
 {
     handleInput(points: Array<Action<Point>>): void;
 }

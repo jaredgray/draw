@@ -15,6 +15,7 @@
         "wwwroot",
         "app/@angular",
         "rxjs",
-        "bin"
+        "bin",
+        "typings"
     ]
 }

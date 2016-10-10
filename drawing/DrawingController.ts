@@ -4,6 +4,7 @@ import { DrawingContext } from "./DrawingContext";
 import { DrawingLayer } from "./DrawingLayer";
 import { Action } from "../user/Action";
 import { Point } from "./Point";
+import { IInputController } from "./IInputController";
 
 export class DrawingController implements IInputController
 {

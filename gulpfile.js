@@ -35,7 +35,7 @@ function(f) {
  */
 
 gulp.task('component.views', function(){
-    return gulp.src('**/*.html')
+    return gulp.src(['samples/**/*.html', 'app/**/*.html', '*.html'])
         .pipe(gulp.dest(function(f) {
             var startrootindex = f.base.lastIndexOf(rootpath);
             var target = f.base.substr(0, startrootindex) + rootreplacepath + f.base.substr(startrootindex + rootpath.length);

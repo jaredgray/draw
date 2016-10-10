@@ -1,0 +1,16 @@
+<md-toolbar class="primary">
+    <span>#tictactoe</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="md-fill"></span>
+    <form [hidden]="isUserSet" (ngSubmit)="setUser()" #appForm="ngForm">
+    <md-input name="userName" type="text" [(ngModel)]="user.name" placeholder="name" align="start">
+        <!--<span md-prefix>$&nbsp;</span>-->
+        <!--<span md-suffix>.00</span>-->
+    </md-input>
+    <button md-raised-button [hidden]="isUserSet">Go</button>
+    </form>
+    <span [hidden]="!isUserSet">well hello, {{ user.name }}</span>
+</md-toolbar>
+<tictactoe-game id="maindrawing">
+</tictactoe-game>

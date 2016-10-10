@@ -1,28 +1,33 @@
 <html>
-  <head>
-    <!-- Set the base href -->
+
+<head>
     <base href="/">
-    <title>Draw - a drawing app</title>
+    <title>tic tac toe - a game</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- #{bundle: bin/app/theme/bundle.css} -->
     <link rel="stylesheet" href="bin/app/theme/material-layout.css">
     <link rel="stylesheet" href="bin/app/theme/md-toolbar.css">
+    <link rel="stylesheet" href="bin/app/theme/md-input.css">
     <link rel="stylesheet" href="bin/app/stage/stage.component.css">
     <link rel="stylesheet" href="bin/app/theme/material-dark.css">
+
+    <script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+        crossorigin="anonymous"></script>
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
     <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="systemjs.config.js"></script>
+    <script src="samples/tictactoe/systemjs.config.js"></script>
     <script>
       System.import('app')
             .catch(function(err){ console.error(err); });
     </script>
-  </head>
-  <body class="dark">
-    <draw-app>
+</head>
+
+<body class="dark">
+    <tictactoe-app>
       <style type="text/css">
             body { margin: 0; padding: 0; background: #3498db; }
             .cs-loader { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
@@ -51,6 +56,7 @@
                 <label>	●</label>
             </div>
         </div>
-        </draw-app>
-  </body>
+    </tictactoe-app>
+</body>
+
 </html>

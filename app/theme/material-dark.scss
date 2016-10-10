@@ -1,4 +1,6 @@
 @import "material-variables.scss";
 
 .dark .primary { background: $dark-primary-color; color: $dark-primary-foreground; }
+.dark .primary input { color: $dark-primary-foreground; }
+.dark .primary button { color: $dark-background; }
 .dark .background { background: $dark-background; }
