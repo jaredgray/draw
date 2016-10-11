@@ -1,6 +1,22 @@
 @import "material-variables.scss";
 
-.dark .primary { background: $dark-primary-color; color: $dark-primary-foreground; }
-.dark .primary input { color: $dark-primary-foreground; }
-.dark .primary button { color: $dark-background; }
-.dark .background { background: $dark-background; }
+.dark .primary
+{
+    background: $dark-primary-color; 
+    color: $dark-primary-foreground;
+
+    input { color: $dark-primary-foreground; }
+    button { color: $dark-background; }
+    /* md- specific colors */
+    /* when the background is dark the foreground for input[type=text] should be light */
+    md-input 
+    {
+        .md-input-placeholder, .md-input-placeholder.md-float,  .md-input-placeholder.md-float.md-focused { color: $dark-primary-foreground; }
+        .md-input-underline
+        {
+            border-color: $dark-primary-foreground;
+            .md-input-ripple.md-focused  { background-color: $dark-primary-foreground; }
+        }
+    }
+}
+
