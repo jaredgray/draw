@@ -10,7 +10,21 @@
     </md-input>
     <button md-raised-button [hidden]="isUserSet">Go</button>
     </form>
-    <span [hidden]="!isUserSet"><i class="material-icons">account_circle</i> {{ user.name }}</span>
+    <form [hidden]="!isUserSet">
+        <button md-button (click)="start.open()"><i class="material-icons">add_circle_outline</i></button>
+        <span><i class="material-icons">account_circle</i> {{ user.name }}</span>
+    </form>
 </md-toolbar>
+  <md-sidenav-layout>
+    <md-sidenav #start (open)="mybutton.focus()">
+      Start Sidenav.
+      <br>
+      <button md-button #mybutton (click)="start.close()">Close</button>
+    </md-sidenav>
+    <md-sidenav #end align="end">
+      End Sidenav.
+      <button md-button (click)="end.close()">Close</button>
+    </md-sidenav>
+  </md-sidenav-layout>
 <tictactoe-game id="maindrawing">
 </tictactoe-game>
