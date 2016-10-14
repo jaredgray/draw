@@ -4,7 +4,7 @@
     <!-- This fills the remaining space of the current row -->
     <span class="md-fill"></span>
     <form [hidden]="isUserSet" (ngSubmit)="setUser()" #appForm="ngForm">
-    <md-input name="userName" type="text" [(ngModel)]="user.name" placeholder="name" align="start">
+    <md-input name="userName" type="text" [(ngModel)]="gameView.currentGame.me" placeholder="name" align="start">
         <!--<span md-prefix>$&nbsp;</span>-->
         <!--<span md-suffix>.00</span>-->
     </md-input>
@@ -12,7 +12,7 @@
     </form>
     <form [hidden]="!isUserSet">
         <button md-button (click)="start.open()"><i class="material-icons">add_circle_outline</i></button>
-        <span><i class="material-icons">account_circle</i> {{ user.name }}</span>
+        <span><i class="material-icons">account_circle</i> {{ gameView.currentGame.me }}</span>
     </form>
 </md-toolbar>
   <md-sidenav-layout>

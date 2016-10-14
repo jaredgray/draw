@@ -1,3 +1,3 @@
-export * from "./user.model";
-export * from "./turn.model";
 export * from "./game.context";
+export * from "./game.view";
+export * from './user.model';

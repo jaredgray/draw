@@ -1,9 +1,8 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 
 import { DomService } from "../../../app/services/domservice/dom.service";
-import { GameService } from "../gameservice/game.service";
-import { UserService } from "../userservice/user.service";
-import { User, Turn, GameContext } from "../models/index";
+import { GameService, UserService } from "../services/index";
+import { User, GameContext } from "../models/index";
 
 import { DrawingRecorder } from "../../../drawing/DrawingRecorder";
 import { CanvasDrawingRenderer } from "../../../drawing/canvas/CanvasDrawingRenderer";

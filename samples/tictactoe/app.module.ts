@@ -15,7 +15,7 @@ import { MdSidenavModule } from '@angular2-material/sidenav';
 import { AppComponent } from './app.component';
 import { TicTacToeGameComponent } from "./tictactoe-game/tictactoe-game.component"
 
-import { UserService } from "./userservice/user.service";
+import { UserService } from "./services/index";
 
 @NgModule({
     imports: [
