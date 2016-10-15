@@ -26,11 +26,21 @@ export class AppComponent
         {
             var query = location.hash.substring(1);
             var oauthToken = this.oauthService.parseGoogleResponseQueryString(query);
+            console.log(oauthToken);
+            this.gameView.user.name = oauthToken.state;
             // sweet, received a token
             // TODO: check validity of the token
             this.googleApi.getSignedInUserEmail(oauthToken).subscribe(email =>
             {
-                console.log(email);
+                this.gameView.user.email = email.data.email;
+                this.userService.setUser(this.gameView.user).subscribe(user =>
+                {
+                    console.log(user);
+                },
+                error =>
+                {
+                    console.log(error);
+                });
             },
             error =>
             {
@@ -41,12 +51,14 @@ export class AppComponent
 
     setUser()
     {
-        console.log("setting the user to " + this.gameView.currentGame.me);
+        console.log("setting the user to " + this.gameView.user.name);
 
-        if (this.gameView.currentGame.me && this.gameView.currentGame.me.length)
+        if (this.gameView.user.name && this.gameView.user.name.length)
         {
-            this.oauthService.loginGoogle(this.gameView.currentGame.me);
-            //this.userService.setUser(this.user);
+            // this will cause a redirect to google
+            // when the player is redirected back, the ngOnInit 
+            // will take care of completing login for the game.
+            this.oauthService.loginGoogle(this.gameView.user.name);
         }
     }
 }

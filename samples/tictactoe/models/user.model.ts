@@ -1,5 +1,7 @@
 export class User
 {
-    userName: string;
-    
+    PartitionKey: string;
+    RowKey: string;
+    name: string;
+    email: string;
 }
