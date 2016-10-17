@@ -9,7 +9,7 @@ export class GoogleApiService
 
     getSignedInUserEmail(oauthToken: any)
         : Observable<any>
-    {
+    { 
         return this.http.get('https://www.googleapis.com/userinfo/email?alt=json&access_token=' + oauthToken.access_token)
             .map((response: Response) => response.json());
     }

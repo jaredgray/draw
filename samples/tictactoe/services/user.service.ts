@@ -17,6 +17,7 @@ export class UserService
     {
         console.log("SET USER---------");
         console.log(user);
+        user.created = "2016-10-15T20:06:02.4659556-07:00";
         this.current = user;
         let t = this;
         this.userChange.emit(this.current);
@@ -24,7 +25,7 @@ export class UserService
         let payload = JSON.stringify(user);
         headers.append('Content-Type', 'application/json');
         let options = new RequestOptions({ headers: headers, method: "post" });
-        return this.http.post("http://localhost:52028/api/user", payload, options)
+        return this.http.put("http://localhost:52028/api/user", payload, options)
             .map((response: Response) =>
             {
                 t.current = response.json(); return t.current;
